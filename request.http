@@ -1,0 +1,49 @@
+### Petición GET a la raíz de la API "http://localhost:8000/api/v1"
+GET http://{{base_url}}
+
+### Petición GET a un ID Específico
+GET http://{{base_url}}/customers/65a57f579a22ee68edac8023
+
+### >>> GET Request to "All Customers Records"
+GET http://{{base_url}}/customers
+
+### >>> GET request for a "Specific Customer Record"
+GET http://{{base_url}}/customers/1
+
+### >>> POST request to "Create a New Customer Record"
+POST http://{{base_url}}/customers
+
+### Petición POST hacia "http://localhost:8000/api/v1/customers"
+POST http://{{base_url}}/customers
+Content-Type: application/json
+
+{
+
+  "name": "Maximiliano Aravena Araya",
+  "email": "max@programadores.org",
+  "whatsapp": "+56961923035"
+
+}
+
+### >>> PUT Request to "Update Customer Record"
+PUT http://{{base_url}}/customers/1
+
+### PUT: Actualización de los Atributos de un Cliente por ID UPDATE ###
+PUT http://{{base_url}}/customers/65a57f579a22ee68edac8023
+Content-Type: application/json
+
+{
+
+  "name": "warriorweb",
+  "run": "9649702-3",
+  "email": "devwarriorweb@gmail.com",
+  "whatsapp": "+56987654321",
+  "purchased": "true"
+
+}
+
+### >>> DELETE Request to "Destroy a Customer Record"
+DELETE http://{{base_url}}/customers/1
+
+### DELETE: Solicitud de eliminación de Cliente por ID DESTROY ###
+DELETE http://{{base_url}}/customers/65a559989a22ee68edac8022
